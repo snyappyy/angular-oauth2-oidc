@@ -268,15 +268,4 @@ export class AuthConfig {
       Object.assign(this, json);
     }
   }
-
-  /**
-   * This property allows you to override the method that is used to open the login url,
-   * allowing a way for implementations to specify their own method of routing to new
-   * urls.
-   */
-  public openUri?: (uri: string) => void = (uri) => {
-   if(location) {
-    location.href = uri; 
-   }
-  };
 }
