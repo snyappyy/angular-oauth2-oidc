@@ -275,6 +275,6 @@ export class AuthConfig {
    * urls.
    */
   public openUri?: (uri: string) => void = (uri) => {
-    location.href = uri;
+    this.document.location.href = uri;
   };
 }
