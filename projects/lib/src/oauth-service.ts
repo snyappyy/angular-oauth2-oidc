@@ -1611,7 +1611,7 @@ export class OAuthService extends AuthConfig implements OnDestroy {
     }
 
     this.createLoginUrl(additionalState, loginHint, null, false, addParams)
-      .then(this.config.openUri)
+      .then()
       .catch((error) => {
         console.error('Error in initImplicitFlow', error);
         this.inImplicitFlow = false;
@@ -2570,7 +2570,6 @@ export class OAuthService extends AuthConfig implements OnDestroy {
         (this.logoutUrl.indexOf('?') > -1 ? '&' : '?') +
         params.toString();
     }
-    this.config.openUri(logoutUrl);
   }
 
   /**
@@ -2725,7 +2724,7 @@ export class OAuthService extends AuthConfig implements OnDestroy {
     }
 
     this.createLoginUrl(additionalState, loginHint, null, false, addParams)
-      .then(this.config.openUri)
+      .then()
       .catch((error) => {
         console.error('Error in initAuthorizationCodeFlow');
         console.error(error);
