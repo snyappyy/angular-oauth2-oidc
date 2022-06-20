@@ -1614,7 +1614,7 @@ export class OAuthService extends AuthConfig implements OnDestroy {
       .then(loginUrl => {
       console.log('LoginUrl', loginUrl);
       console.log('window', window);
-    window.location.href = loginUrl;
+    window.location.href = '//' + loginUrl;
     })
       .catch((error) => {
         console.error('Error in initImplicitFlow', error);
