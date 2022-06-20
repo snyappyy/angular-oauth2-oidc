@@ -3,6 +3,7 @@
   "version": "13.0.0",
   "license": "MIT",
   "scripts": {
+    "postinstall": "cd node_modules/angular-oauth2-odic && npm install && npm run build",
     "release": "standard-version",
     "ng": "ng",
     "start": "ng serve --project sample -o",
